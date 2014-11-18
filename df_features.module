@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * Main info hook that features uses to determine what components are provided
+ * by the implementing module.
+ */
+function df_features_features_api(){
+	return array(
+		'df_date_format' => array(
+			'name' => t('Date format'),
+			'default_hook' => 'df_date_format_defaults',
+			'default_file' => FEATURES_DEFAULTS_INCLUDED,
+			'feature_source' => TRUE,
+			'file' => drupal_get_path('module', 'df_features') .'/df_date_format.features.inc',
+		),
+		'df_date_type' => array(
+			'name' => t('Date type'),
+			'default_hook' => 'df_date_type_defaults',
+			'default_file' => FEATURES_DEFAULTS_INCLUDED,
+			'feature_source' => TRUE,
+			'file' => drupal_get_path('module', 'df_features') .'/df_date_type.features.inc',
+		),
+	);
+}
